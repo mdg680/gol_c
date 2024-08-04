@@ -1,10 +1,11 @@
 CC = gcc # Flag for implicit rules
-CFLAGS = -g # Flag for implicit rules. Turn on debug info
+CFLAGS = -Wall -W -pedantic -O # Flag for implicit rules. Turn on debug info
 
 all:
-	gcc main.c -o main.o -c
-	gcc grid.c -o grid.o -c
-	gcc -o prog *.o
+	$(CC) $(CFLAGS) main.c -o main.o -c
+	$(CC) $(CFLAGS) grid.c -o grid.o -c
+	$(CC) -o prog.out *.o
+	rm -r *.o
 
 clean:
-	rm -r *.o prog
+	rm -r *.o prog.out

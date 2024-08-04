@@ -3,8 +3,9 @@
 
 int main(void)
 {
-    printf("run");
-
-    struct grid ngrid = create_grid(40, 30);
-    print_grid(ngrid);
+    struct grid ngrid = create_grid(10, 10);
+    insert_cell(&ngrid, 1, 3, 3);
+    insert_cell(&ngrid, 1, 1, 3);
+    insert_cell(&ngrid, 1, 2, 1);
+    print_grid(&ngrid);
 }
