@@ -8,4 +8,6 @@ int main(void)
     insert_cell(&ngrid, 1, 1, 3);
     insert_cell(&ngrid, 1, 2, 1);
     print_grid(&ngrid);
+
+    return 0;
 }
