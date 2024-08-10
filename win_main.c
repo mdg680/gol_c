@@ -70,13 +70,6 @@ int WINAPI WinMain(
         DispatchMessage(&msg);
     }
 
-    // MessageBoxW(
-    //     NULL, 
-    //     TEXT("Hello WinAPI Graphical User Interface"), 
-    //     TEXT("Welcome"), 
-    //     0
-    // );
-
     return 0;
 }
 

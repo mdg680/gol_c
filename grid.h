@@ -1,7 +1,5 @@
 #ifndef GRID_H_
 #define GRID_H_
-
-
 typedef struct
 {
     int dim_x;
