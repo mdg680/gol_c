@@ -25,7 +25,7 @@ int WINAPI WinMain(
         int dim_x;
     };
 
-    struct screen_props sp = {.dim_y = 800, .dim_x = 600};
+    struct screen_props sp = {.dim_y = 600, .dim_x = 800};
 
     // This has to be initialized to 0's, otherwise registering the
     // class will fail and hwnd will resolve to NULL
@@ -44,7 +44,7 @@ int WINAPI WinMain(
         WS_OVERLAPPEDWINDOW,
 
         // origin and dimensions
-        CW_USEDEFAULT, CW_USEDEFAULT, 800, 600,
+        CW_USEDEFAULT, CW_USEDEFAULT, sp.dim_x, sp.dim_y,
 
         NULL,           // Parent window
         NULL,           // Menu
