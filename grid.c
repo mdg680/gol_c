@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "grid.h"
 
-struct grid create_grid(int dim_x, int dim_y)
+grid create_grid(int dim_x, int dim_y)
 {
-    struct grid grid;
+    grid grid;
     grid.dim_x = dim_x;
     grid.dim_y = dim_y;
     grid.grid_array = (int*)calloc(dim_x * dim_y, sizeof(int));
@@ -12,17 +12,17 @@ struct grid create_grid(int dim_x, int dim_y)
     return grid;
 }
 
-void populate_grid_random(struct grid* grid)
+void populate_grid_random(grid* grid)
 {
     // TODO
 }
 
-void insert_cell(struct grid* grid, int value, int x, int y)
+void insert_cell(grid* grid, int value, int x, int y)
 {
     grid->grid_array[y * grid->dim_y + x] = value;
 }
 
-void print_grid(struct grid* grid)
+void print_grid(grid* grid)
 {
     printf("Print Grid(%d,%d)\n\n", grid->dim_x, grid->dim_y);
     for (int y = 0; y < grid->dim_y; y++){
