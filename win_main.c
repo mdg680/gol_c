@@ -14,6 +14,10 @@ int WINAPI WinMain(
         int nCmdShow
     ) 
 {
+    // Supress unused parameter warnings
+    (void)hInstance;
+    (void)hPrevInstance;
+    (void)lpCmdLine;
 
     // Register window class
     const wchar_t CLASS_NAME[] = L"Sample window class";
@@ -54,7 +58,7 @@ int WINAPI WinMain(
 
     if (hwnd == NULL)
     {
-        printf("hwnd is NULL: %d", hwnd);
+        printf("hwnd is NULL");
         return 0;
     }
 
