@@ -17,6 +17,15 @@ int WINAPI WinMain(
 
     // Register window class
     const wchar_t CLASS_NAME[] = L"Sample window class";
+    const wchar_t MAIN_WINDOW_NAME[] = L"Test window";
+
+    struct screen_props
+    {
+        int dim_y;
+        int dim_x;
+    };
+
+    struct screen_props sp = {.dim_y = 800, .dim_x = 600};
 
     // This has to be initialized to 0's, otherwise registering the
     // class will fail and hwnd will resolve to NULL
@@ -31,7 +40,7 @@ int WINAPI WinMain(
     HWND hwnd = CreateWindowExW(
         0,
         CLASS_NAME,     // Class name
-        L"Test window", // Window name
+        MAIN_WINDOW_NAME, // Window name
         WS_OVERLAPPEDWINDOW,
 
         // origin and dimensions
