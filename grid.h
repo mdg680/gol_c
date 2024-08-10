@@ -1,6 +1,7 @@
 #ifndef GRID_H_
 #define GRID_H_
 
+
 typedef struct
 {
     int dim_x;
@@ -9,9 +10,9 @@ typedef struct
 } grid;
 
 
-grid create_grid(int dim_x, int dim_y);
-void print_grid(grid* grid);
-void populate_grid_random(grid*);
+grid create_grid(int, int);
+void print_grid(grid*);
 void insert_cell(grid*, int, int, int);
+int get_cell(grid*, int, int);
 
 #endif
